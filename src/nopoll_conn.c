@@ -1085,7 +1085,7 @@ noPollConn * __nopoll_conn_new_common (noPollCtx       * ctx,
 		/* Check for opts to verify hostname validation during conn handshake */  
 		if (options == NULL ||  options->host_verify) 
 		{
-		    noPollHostValidationStatus status = Error;
+		    noPollHostValidationStatus status = ERROR;
 		    /* hostname should be validated without http/https, so pass conn->host_name */
 		    status = nopoll_validate_hostname(server_cert, conn->host_name);
 		    if( status == MATCH_FOUND )
